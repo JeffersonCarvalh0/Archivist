@@ -12,12 +12,24 @@ def make_valid(filename):
 
 files = [file for file in listdir(getcwd()) if isfile(file)]
 
+file_counter = 0
 for file in files:
     song = File(file, easy=True)
-    if song is None:
-        continue
-    artist_name = make_valid(song.get('artist', 'unknown_artist')[0])
-    album_name = make_valid(song.get('album', 'unknown_album')[0])
-    song_directory = join(artist_name, album_name)
-    makedirs(song_directory, exist_ok=True)
-    rename(file, join(song_directory, file))
+    if song is not None:
+        artist_name = song.get('artist', 'unknown_artist')
+        artist_name = artist_name[0] if type(artist_name) == list else artist_name
+        artist_name = make_valid(artist_name)
+
+        album_name = song.get('album', 'unknown_album')
+        album_name = album_name[0] if type(album_name) == list else album_name
+        album_name = make_valid(album_name)
+
+        print('Processing now: File name: %s; Artist name: %s; Album name: %s' %(file, artist_name, album_name))
+
+        song_directory = join(artist_name, album_name)
+        makedirs(song_directory, exist_ok=True)
+        rename(file, join(song_directory, file))
+
+        file_counter += 1
+
+print('Job done. %d files processed.' %(file_counter))
