@@ -18,9 +18,9 @@ the song's band/artist and its album. To install it:
 The only file you'll need is [archivist.py](archivist.py). To download and install it,
 folow these steps:
 
-`wget https://raw.githubusercontent.com/JeffersonCarvalh0/Archivist/master/archivist.py` - To download it
-`chmod u+x archivist.py` - To give it permission to execute
-`sudo mv archivist.py /usr/bin/archivist` - To allow it to be executed globally
+* `wget https://raw.githubusercontent.com/JeffersonCarvalh0/Archivist/master/archivist.py` - To download it
+* `chmod u+x archivist.py` - To give it permission to execute
+* `sudo mv archivist.py /usr/bin/archivist` - To allow it to be executed globally
 
 ### Usage
 Just type `archivist` anywhere you like, and it should do the job.
