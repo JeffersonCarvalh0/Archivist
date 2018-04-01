@@ -22,20 +22,18 @@ folow these steps:
 `chmod u+x archivist.py` - To give it permission to execute
 `sudo mv archivist.py /usr/bin/archivist` - To allow it to be executed globally
 
-Give it e
-
-## Usage
+### Usage
 Just type `archivist` anywhere you like, and it should do the job.
 Alternatively, you can give a directory as an argument.
 
 The program will search for music files in the given directory, separating the files
 by artist and album, after getting this info from the file's tag.
 
-## Uninstalling
+### Uninstalling
 To uninstall, just type `sudo rm /usr/bin/archivist` in the terminal.
 
-### Built With
+## Built With
 * [Mutagen](https://mutagen.readthedocs.io/en/latest/) - A Python module to handle audio metadata
 
-### License
+## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
